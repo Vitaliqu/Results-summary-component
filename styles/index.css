@@ -254,7 +254,7 @@ img {
     .reaction-container, .memory-container, .verbal-container, .visual-container {
         flex-grow: 1;
         min-height: 25px;
-        max-height: 4rem;
+        max-height: 5rem;
     }
 
 }
