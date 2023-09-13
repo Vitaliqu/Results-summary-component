@@ -4,11 +4,9 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
 }
 
 html {
@@ -22,15 +20,8 @@ html {
     box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);
     width: 46rem;
     height: 32rem;
-    flex-direction: row;
-    background-color: hsl(0, 0%, 100%);
 }
 
-.result-text {
-    font-size: 22px;
-    opacity: 0.7;
-    margin: 2rem 0;
-}
 
 .result-container {
     color: white;
@@ -43,6 +34,12 @@ html {
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
+.result-text {
+    font-size: 22px;
+    opacity: 0.7;
+    margin: 2rem 0;
+}
+
 .result-score {
     display: flex;
     flex-shrink: 0;
@@ -52,7 +49,6 @@ html {
     align-items: center;
     width: 12rem;
     height: 12rem;
-    margin-bottom: 15px;
     background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 
 }
@@ -61,13 +57,29 @@ html {
     font-weight: 700;
     font-size: 74px;
     margin: 0;
-    padding: 0;
 }
 
 .max-score {
     margin: 0;
-    padding: 0;
     opacity: 0.6;
+}
+
+.great-text {
+    height: 100%;
+    display: flex;
+    font-size: 38px;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.description {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 300;
+    margin: 1rem 3rem;
+    opacity: 0.7;
 }
 
 .summary-container {
@@ -76,19 +88,17 @@ html {
     flex-direction: column;
 }
 
-.description {
-    text-align: center;
-    font-size: 19px;
-    font-weight: 300;
-    margin: 0 3rem;
-    opacity: 0.7;
-}
-
 .summary-text {
     margin: 2rem 40px;
     text-align: left;
     font-size: 22px;
     font-weight: 600;
+}
+
+.attributes-container {
+    gap: 1rem;
+    display: grid;
+    padding: 0 2.5rem;
 }
 
 .reaction-container, .memory-container, .verbal-container, .visual-container {
@@ -123,17 +133,6 @@ html {
     color: hsl(234, 85%, 45%);
     background-color: hsla(234, 85%, 45%, 0.1);
     border: 1px solid hsla(234, 85%, 45%, 0.1);
-}
-
-.great-text {
-    font-weight: 600;
-    margin: 1rem 0;
-}
-
-.attributes-container {
-    gap: 1rem;
-    display: grid;
-    padding: 0 2.5rem;
 }
 
 .attributes-score {
@@ -196,7 +195,9 @@ img {
     }
 
     .result-container {
-        max-height: 20rem;
+        height: auto;
+        max-height: 22rem;
+        justify-content: space-between;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
 
@@ -208,37 +209,37 @@ img {
     }
 
     .result-score {
-        width: 9rem;
-        height: 9rem;
+        width: 10rem;
+        height: 10rem;
         margin: 0 0;
     }
 
     .score {
-        font-size: 64px;
+        font-size: 58px;
     }
 
     .great-text {
-        font-size: 28px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin:0;
     }
 
     .description {
-        font-size: 14px;
-        margin-bottom: 1rem;
-    }
-
-    .button-container {
-        margin: 1rem 0;
-        height: 6rem;
-    }
-
-    .summary-text {
-        margin: 1.5rem 2rem;
-
+        font-size: 16px;
+        margin: 0.5rem 3rem;
     }
 
     .summary-container {
         height: 100%;
         justify-content: space-between;
+    }
+
+    .summary-text {
+        margin: 1.5rem 2rem;
+
     }
 
     .attributes-container {
@@ -249,12 +250,18 @@ img {
         flex-direction: column;
         justify-content: space-between;
         padding: 0 2rem;
+        gap: 5%;
     }
 
     .reaction-container, .memory-container, .verbal-container, .visual-container {
         flex-grow: 1;
         min-height: 25px;
-        max-height: 4rem;
+        max-height: 5rem;
+    }
+
+    .button-container {
+        margin: 1rem 0;
+        height: 6rem;
     }
 
 }
