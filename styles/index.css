@@ -1,6 +1,5 @@
 
 body {
-    background-color: #fdfdfd;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -16,6 +15,7 @@ html {
 .application-container {
     font-family: Hanken Grotesk;
     display: flex;
+    background-color: white;
     border-radius: 30px;
     box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);
     width: 46rem;
@@ -83,6 +83,7 @@ html {
 }
 
 .summary-container {
+    background-color: white;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -181,6 +182,7 @@ img {
 
 @media screen and (max-width: 768px) {
     body {
+        background-color: hsl(252, 100%, 67%);
         flex-direction: column;
         justify-content: space-between;
     }
@@ -190,13 +192,11 @@ img {
         border-radius: 0;
         width: 100%;
         height: 100%;
-        min-height: 0;
         box-shadow: none;
     }
 
     .result-container {
-        height: auto;
-        max-height: 22rem;
+        max-height: 20rem;
         justify-content: space-between;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -209,8 +209,9 @@ img {
     }
 
     .result-score {
-        width: 10rem;
-        height: 10rem;
+        display: flex;
+        max-width: 9rem;
+        max-height: 9rem;
         margin: 0 0;
     }
 
@@ -219,7 +220,6 @@ img {
     }
 
     .great-text {
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -233,7 +233,6 @@ img {
     }
 
     .summary-container {
-        height: 100%;
         justify-content: space-between;
     }
 
@@ -243,18 +242,18 @@ img {
     }
 
     .attributes-container {
-        height: 100%;
-        min-height: 15rem;
+        max-height: auto;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         padding: 0 2rem;
-        gap: 5%;
+        gap: 6px;
     }
 
     .reaction-container, .memory-container, .verbal-container, .visual-container {
         flex-grow: 1;
-        min-height: 2rem;
+        height: 2rem;
         max-height: 4rem;
     }
 
@@ -265,8 +264,7 @@ img {
 
     }
     .continue-button {
-        min-height: 0;
-        height: 3rem;
+        height: 3.5rem;
         margin: 0 0;
         flex-grow: 3;
     }
