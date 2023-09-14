@@ -272,13 +272,5 @@ img {
         margin: 0 0;
         flex-grow: 3;
     }
-    .continue-button::before,
-    .continue-button::after {
-        content: '';
-        display: inline-block;
-        width: 2em;
-        flex-basis: 2em;
-        float: left;
-    }
 
 }
